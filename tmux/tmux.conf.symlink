@@ -1,0 +1,1 @@
+bind-key ` select-window -t:0
