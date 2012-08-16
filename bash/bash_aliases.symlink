@@ -1,1 +1,1 @@
-alias ltmux='tmux has && tmux attach || tmux new'
+alias ltmux='test -f /usr/bin/tmux && (tmux has && tmux attach || tmux new) || screen -D -R'
