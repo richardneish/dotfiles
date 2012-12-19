@@ -1,4 +1,12 @@
+set nocompatible           " be iMproved
+
+" ----------------------------------------------------------------------------
+"  Files and buffers
+" ----------------------------------------------------------------------------
+
 set noswapfile
+set nobackup
+set hidden                 " Hide buffers instead of closing them when switching
 
 " ----------------------------------------------------------------------------
 "  Text Formatting
@@ -31,7 +39,7 @@ set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
 colorscheme desert
-set guioptions+=M          " No menu for GVim
+set guioptions+=M
 
 " ----------------------------------------------------------------------------
 " Visual Cues
@@ -41,4 +49,10 @@ set showmatch              " brackets/braces that is
 set incsearch              " do incremental searching
 set laststatus=2           " always show the status line
 set visualbell             " no beeping
+set noerrorbells           " no beeping
+
+" Pathogen activation
+call pathogen#infect()
+syntax on
+filetype plugin indent on
 
