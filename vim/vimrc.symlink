@@ -51,6 +51,12 @@ set laststatus=2           " always show the status line
 set visualbell             " no beeping
 set noerrorbells           " no beeping
 
+" ----------------------------------------------------------------------------
+"  Filesystem path, find and browse behaviour.
+" ----------------------------------------------------------------------------
+set path=,,**              " Find searches underneath the current directory.
+set browsedir=buffer       " Browse defaults to the directory containing the current buffer.
+
 " Pathogen activation
 call pathogen#infect()
 syntax on
