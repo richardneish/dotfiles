@@ -1,0 +1,12 @@
+# This file should be included in your ~/.gitconfig file by adding the lines:
+# [include]
+#     path=~/.gitaliases
+# See http://www.durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+[alias]
+    aliases = "!git config -l | grep \"^alias.\" | cut -c 7-"
+
+    # Assume marks a file as unchanged so it is not included in commits.
+    # Use for local changes that should not be committed or included in .gitinclude
+    assume = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed = "!git ls-files -v | grep \"^[a-z]\" | cut -c 3-"
