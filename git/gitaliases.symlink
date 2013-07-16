@@ -3,12 +3,12 @@
 #     path=~/.gitaliases
 # See http://www.durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
 [alias]
-    aliases = "!git config -l | grep \"^alias.\" | cut -c 7-"
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 
     # Assume marks a file as unchanged so it is not included in commits.
     # Use for local changes that should not be committed or included in .gitinclude
     assume = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
-    assumed = "!git ls-files -v | grep \"^[a-z]\" | cut -c 3-"
+    assumed = !git ls-files -v | grep "^[a-z]" | cut -c 3-
 
-    ignored = "!git ls-files --others --ignored --exclude-from=.git/info/exclude"
+    ignored = !git ls-files --others --ignored --exclude-from=.git/info/exclude
