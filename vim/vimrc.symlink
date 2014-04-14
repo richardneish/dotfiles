@@ -57,6 +57,18 @@ set noerrorbells           " no beeping
 set path=,,**              " Find searches underneath the current directory.
 set browsedir=buffer       " Browse defaults to the directory containing the current buffer.
 
+" function to format JSON-like text
+function! FormatJson() 
+  " Insert newline after every '{'
+  %s/{/{\r/g
+  " Insert newline before every '}'
+  %s/}/\r}/g
+  " Insert newline after every ','
+  %s/,/,\r/g
+  " Reindent
+  normal ggVG=
+endf
+
 " Pathogen activation
 call pathogen#infect()
 syntax on
