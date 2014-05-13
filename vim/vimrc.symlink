@@ -23,6 +23,7 @@ set nosmarttab             " no tabs
 "set textwidth=80           " wrap at 80 chars by default
 set virtualedit=block      " allow virtual edit in visual block ..
 set tildeop
+filetype indent on
 
 " ----------------------------------------------------------------------------
 "  UI
@@ -73,4 +74,3 @@ endf
 call pathogen#infect()
 syntax on
 filetype plugin indent on
-
