@@ -99,3 +99,8 @@ alias screen='screen -D -R'
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+
+# Configure Amazon EC2 API access if configuration file exists.
+if [ -f ~/.ec2.rc ]; then
+    . ~/.ec2.rc
+fi
