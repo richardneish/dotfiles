@@ -18,6 +18,7 @@
         branch = auto
 [core]
         excludesfile = ~/.gitignore
+        ignorecase = false
 [apply]
         whitespace = nowarn
 [github]
