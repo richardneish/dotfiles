@@ -1,1 +1,2 @@
 alias ltmux='test -f /usr/bin/tmux && (tmux has && tmux attach || tmux new) || screen -D -R'
+function settitle() { /bin/echo -ne "\e]0;$*\a"; }
