@@ -104,3 +104,6 @@ fi
 if [ -f ~/.ec2.rc ]; then
     . ~/.ec2.rc
 fi
+
+# Support for Python virtualenvwrapper
+export WORKON_HOME=$HOME/virtualenvs
