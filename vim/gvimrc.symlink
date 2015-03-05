@@ -41,5 +41,5 @@ nmap <d-7> 7gt
 nmap <d-8> 8gt
 nmap <d-9> 9gt
 
-# Integrate the Vim clipboard with the system clipboard
+" Integrate the Vim clipboard with the system clipboard
 set clipboard=unnamed
