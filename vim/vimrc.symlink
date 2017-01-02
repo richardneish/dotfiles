@@ -92,3 +92,8 @@ filetype plugin indent on
 " Add git status to status line (requires vim-fugitive)
 set statusline +=%{fugitive#statusline()}
 
+" Remap jk to ESC
+inoremap jk <ESC>
+
+" Set the leader key to SPACE
+let mapleader = "\<Space>"
