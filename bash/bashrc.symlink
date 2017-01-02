@@ -81,17 +81,10 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
-
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-
-alias screen='screen -D -R'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -107,3 +100,8 @@ fi
 
 # Support for Python virtualenvwrapper
 export WORKON_HOME=$HOME/virtualenvs
+
+# Git prompt
+source ~/bin/git-prompt.sh
+origPS1=${PS1%$ }
+PROMPT_COMMAND='__git_ps1 "$origPS1" "$ "'
