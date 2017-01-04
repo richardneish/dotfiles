@@ -97,3 +97,18 @@ inoremap jk <ESC>
 
 " Set the leader key to SPACE
 let mapleader = "\<Space>"
+
+" Mapping for navigation around screen splits
+map <Leader>h h
+map <Leader>j j
+map <Leader>k k
+map <Leader>l l
+
+" Configuration for the session.vim plugin (provides SaveSession / OpenSession
+" commands.)
+let g:session_autosave=0
+let g:session_directory='~/sessions/'
+
+" Mapping for NERDTree plugin
+map <F2> :NERDTreeToggle<CR>
+let NERDTreeShowBookmarks=1
