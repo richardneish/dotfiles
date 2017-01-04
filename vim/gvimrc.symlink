@@ -1,7 +1,6 @@
 " Enable the Solarized color scheme
 syntax enable
 set background=dark
-colorscheme solarized
 
 set anti
 set lines=60 columns=132
