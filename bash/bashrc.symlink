@@ -105,3 +105,8 @@ export WORKON_HOME=$HOME/virtualenvs
 source ~/bin/git-prompt.sh
 origPS1=${PS1%$ }
 PROMPT_COMMAND='__git_ps1 "$origPS1" "$ "'
+
+# Rust paths
+export CARGO_HOME=/usr/local/rust/cargo
+export RUSTUP_HOME=/usr/local/rust/rustup
+export PATH=$PATH:$CARGO_HOME/bin
