@@ -54,6 +54,7 @@ set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
 set guioptions+=M          " No menu for GVim
+set mouse=a                " Mouse support - you may need gpm running for command line vim
 
 " ----------------------------------------------------------------------------
 " Visual Cues
