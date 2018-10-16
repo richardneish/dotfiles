@@ -3,3 +3,16 @@ function settitle() { /bin/echo -ne "\e]0;$*\a"; }
 function ssh() { settitle "ssh $*" && env ssh $*; }
 function findpackage() { dpkg --search $(command -v "$*") | cut -d: -f1; }
 function packagefiles() { dpkg --listfiles "$*"; }
+function composer () {
+    tty=
+    tty -s && tty=--tty
+    docker run \
+        $tty \
+        --interactive \
+        --rm \
+        --user $(id -u):$(id -g) \
+        --volume /etc/passwd:/etc/passwd:ro \
+        --volume /etc/group:/etc/group:ro \
+        --volume $(pwd):/app \
+        composer "$@"
+}
